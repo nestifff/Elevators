@@ -16,7 +16,7 @@ public class UpdaterElevatorStateAndNextDestination {
     public static final int DEFAULT_DOWN_VALUE = 0;
     public static final int DEFAULT_UP_VALUE = COUNT_OF_FLOORS + 1;
 
-    // не обязательно обновит nextDestination (вызов в floorButtonOnClick)
+    // не обязательно обновит nextDestination
     public void update(Elevator elevator) {
 
         int currFloorNum = elevator.getCurrFloorNum();

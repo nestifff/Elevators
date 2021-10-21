@@ -16,7 +16,7 @@ import static elevators.button.ButtonDirection.UP;
 
 public class FirstFloor extends Floor {
 
-    private static Map<Building, FirstFloor> alreadyCreated = new HashMap<>();
+    private static final Map<Building, FirstFloor> alreadyCreated = new HashMap<>();
 
     public static FirstFloor create(Building building, BlockingQueue<ButtonOnClickData> queue) {
         if (alreadyCreated.containsKey(building)) {

@@ -30,11 +30,15 @@ public class ElevatorsStatistics extends Thread implements ElevatorArrivedFloorL
 
     private final List<Floor> floors = new ArrayList<>();
 
+    private final int intervalSecondsToPrintStatistics;
+
     public ElevatorsStatistics(ElevatorArrivedFloorListener whatToWrap,
-                               List<Elevator> elevators, List<Floor> floors) {
+                               List<Elevator> elevators, List<Floor> floors,
+                               int intervalSecondsToPrintStatistics) {
 
         this.floors.addAll(floors);
         this.whatToWrap = whatToWrap;
+        this.intervalSecondsToPrintStatistics = intervalSecondsToPrintStatistics;
         elevators.forEach(it -> {
             statistics.put(it, new ElevatorStatisticsItem());
             elevatorsPrevPositions.put(it, new ElevatorPrevPositionItem());
@@ -58,12 +62,12 @@ public class ElevatorsStatistics extends Thread implements ElevatorArrivedFloorL
     @SneakyThrows
     @Override
     public void run() {
-        TimeUnit.SECONDS.sleep(INTERVAL_TO_PRINT_STATISTICS);
+        TimeUnit.SECONDS.sleep(intervalSecondsToPrintStatistics);
 
         while (isNeedWork) {
             log.info(getInterimStatisticsString());
             synchronized (needStopMonitor) {
-                needStopMonitor.wait(INTERVAL_TO_PRINT_STATISTICS * 1000);
+                needStopMonitor.wait(intervalSecondsToPrintStatistics * 1000);
             }
         }
         log.info("Finished");
@@ -100,9 +104,8 @@ public class ElevatorsStatistics extends Thread implements ElevatorArrivedFloorL
     }
 
     @SneakyThrows
-    public void writeToFile(String fileName) {
+    public void writeToFile(FileWriter output) {
 
-        FileWriter output = new FileWriter(fileName);
         output.write(getInterimStatisticsString());
         output.write("\n");
         output.write("Remaining passengers on floors: \n");
@@ -116,7 +119,7 @@ public class ElevatorsStatistics extends Thread implements ElevatorArrivedFloorL
         output.close();
     }
 
-    private String getInterimStatisticsString() {
+    public String getInterimStatisticsString() {
         StringBuilder sb = new StringBuilder();
         sb.append("\n");
         statistics.forEach((key, value) ->

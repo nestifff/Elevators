@@ -9,7 +9,7 @@ import java.util.Set;
 @Data
 public class ElevatorPrevPositionItem {
 
-    private int floor;
+    private int floor = 1;
     private Set<Passenger> passengers = new HashSet<>();
 
 }

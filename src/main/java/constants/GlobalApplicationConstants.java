@@ -6,9 +6,9 @@ public class GlobalApplicationConstants {
 
     public static int MAX_PASSENGER_WEIGHT = 150;
     public static int MIN_PASSENGER_WEIGHT = 30;
-    public static int LIFTING_CAPACITY = 800;
-    public static long INTERVAL_TO_GENERATE_PASSENGERS = 5;
-    public static long INTERVAL_TO_GENERATE_PASSENGERS_FIRST_FLOOR = 6;
+    public static int LIFTING_CAPACITY = 400;
+    public static long INTERVAL_TO_GENERATE_PASSENGERS = 10;
+    public static long INTERVAL_TO_GENERATE_PASSENGERS_FIRST_FLOOR = 4;
 
     public static int COUNT_OF_FLOORS = 30;
     public static int COUNT_OF_ELEVATORS = 10;

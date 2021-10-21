@@ -10,8 +10,10 @@ import elevators.controller.elevatorArrivedFloor.ThreadProcessorElevatorArrivedF
 import elevators.controller.floorButtonOnClick.ButtonOnClickData;
 import elevators.controller.floorButtonOnClick.FloorButtonOnClickProcessor;
 import elevators.elevator.Elevator;
+import lombok.SneakyThrows;
 import statistics.ElevatorsStatistics;
 
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -75,7 +77,8 @@ public class Building {
         checkArgument(!floors.isEmpty());
         checkArgument(!passengersSpawns.isEmpty());
 
-        elevatorArrivedFloorStatistic = new ElevatorsStatistics(elevatorsController, elevators, floors);
+        elevatorArrivedFloorStatistic = new ElevatorsStatistics(elevatorsController,
+                elevators, floors, INTERVAL_TO_PRINT_STATISTICS);
         threadProcessorElevatorArrived = new ThreadProcessorElevatorArrivedFloor(elevatorFlagToStop,
                 elevatorsQueue, elevatorArrivedFloorStatistic);
         floorButtonOnClickProcessor = new FloorButtonOnClickProcessor(buttonFlagToStop, flagToStopElevators,
@@ -92,12 +95,13 @@ public class Building {
         elevators.forEach(Thread::start);
     }
 
+    @SneakyThrows
     public void finishAll() {
 
         elevatorArrivedFloorStatistic.finish();
         passengersSpawns.forEach(PassengersGenerator::finish);
 
-        elevatorArrivedFloorStatistic.writeToFile("statisticsElevators.txt");
+        elevatorArrivedFloorStatistic.writeToFile(new FileWriter("statisticsElevators.txt"));
     }
 
     private void createFloors(int numOfFloors) {

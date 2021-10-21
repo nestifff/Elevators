@@ -16,7 +16,7 @@ public class Main {
                 new UpdaterElevatorStateAndNextDestination()
         ));
         building.startAll();
-        TimeUnit.SECONDS.sleep(5);
+        TimeUnit.SECONDS.sleep(60);
         building.finishAll();
     }
 }
