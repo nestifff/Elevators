@@ -2,10 +2,8 @@ package building.passenger;
 
 import elevators.button.Button;
 import elevators.elevator.Elevator;
-import elevators.elevator.ElevatorCurrentState;
 import org.junit.jupiter.api.Test;
 
-import javax.xml.crypto.dom.DOMCryptoContext;
 import java.util.Optional;
 
 import static elevators.button.ButtonDirection.DOWN;

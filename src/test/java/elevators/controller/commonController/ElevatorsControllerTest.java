@@ -254,7 +254,6 @@ class ElevatorsControllerTest {
         controller.elevatorArrivedOnFloor(elevator1, 1);
 
         verify(elevator1).addCall(1);
-        verify(elevator1).removeCall(1);
         verify(updater, times(2)).update(elevator1);
     }
 

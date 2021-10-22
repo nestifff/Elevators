@@ -131,6 +131,7 @@ public class Elevator extends Thread {
 
         buttonPressedDown.remove(currFloorNum);
         buttonPressedUp.remove(currFloorNum);
+        calls.remove(currFloorNum);
 
         currentFloor.elevatorArrived(this);
         elevatorsQueue.put(this);

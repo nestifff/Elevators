@@ -55,7 +55,6 @@ public class ElevatorsController implements ElevatorArrivedFloorListener {
 
             if (floorNumToCalledElevator.get(floorNum).equals(elevator)) {
                 floorNumToCalledElevator.remove(floorNum);
-                elevator.removeCall(floorNum);
 
             } else {
                 abortCall(floorNum);

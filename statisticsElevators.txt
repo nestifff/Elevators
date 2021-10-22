@@ -1,43 +1,38 @@
 
-Elevator 1: ElevatorStatisticsItem(numOfPeopleTransported=20, numOfFloorsPassed=232, numOfStopsOnFloors=40)
-Elevator 2: ElevatorStatisticsItem(numOfPeopleTransported=24, numOfFloorsPassed=214, numOfStopsOnFloors=54)
-Elevator 3: ElevatorStatisticsItem(numOfPeopleTransported=20, numOfFloorsPassed=177, numOfStopsOnFloors=70)
-Elevator 4: ElevatorStatisticsItem(numOfPeopleTransported=21, numOfFloorsPassed=242, numOfStopsOnFloors=35)
-Elevator 5: ElevatorStatisticsItem(numOfPeopleTransported=10, numOfFloorsPassed=123, numOfStopsOnFloors=87)
-Elevator 6: ElevatorStatisticsItem(numOfPeopleTransported=5, numOfFloorsPassed=101, numOfStopsOnFloors=90)
-Elevator 7: ElevatorStatisticsItem(numOfPeopleTransported=24, numOfFloorsPassed=224, numOfStopsOnFloors=42)
-Elevator 8: ElevatorStatisticsItem(numOfPeopleTransported=4, numOfFloorsPassed=42, numOfStopsOnFloors=128)
-Elevator 9: ElevatorStatisticsItem(numOfPeopleTransported=9, numOfFloorsPassed=134, numOfStopsOnFloors=82)
-Elevator 10: ElevatorStatisticsItem(numOfPeopleTransported=11, numOfFloorsPassed=136, numOfStopsOnFloors=83)
+Elevator 1: ElevatorStatisticsItem(numOfPeopleTransported=26, numOfFloorsPassed=276, numOfStopsOnFloors=44)
+Elevator 2: ElevatorStatisticsItem(numOfPeopleTransported=31, numOfFloorsPassed=251, numOfStopsOnFloors=48)
+Elevator 3: ElevatorStatisticsItem(numOfPeopleTransported=34, numOfFloorsPassed=225, numOfStopsOnFloors=63)
+Elevator 4: ElevatorStatisticsItem(numOfPeopleTransported=36, numOfFloorsPassed=239, numOfStopsOnFloors=59)
+Elevator 5: ElevatorStatisticsItem(numOfPeopleTransported=38, numOfFloorsPassed=220, numOfStopsOnFloors=64)
 
 Remaining passengers on floors: 
-Floor 1: [Passenger{w=105, start=1, finish=7, willSitOnAnyFloor=false}]
+Floor 1: [Passenger{w=97, start=1, finish=19, willSitOnAnyFloor=false}]
 Floor 2: []
-Floor 3: [Passenger{w=134, start=3, finish=28, willSitOnAnyFloor=true}]
+Floor 3: []
 Floor 4: []
 Floor 5: []
 Floor 6: []
 Floor 7: []
 Floor 8: []
 Floor 9: []
-Floor 10: [Passenger{w=91, start=10, finish=26, willSitOnAnyFloor=false}]
-Floor 11: [Passenger{w=54, start=11, finish=21, willSitOnAnyFloor=false}]
-Floor 12: []
+Floor 10: []
+Floor 11: []
+Floor 12: [Passenger{w=135, start=12, finish=30, willSitOnAnyFloor=true}]
 Floor 13: []
 Floor 14: []
-Floor 15: [Passenger{w=94, start=15, finish=20, willSitOnAnyFloor=false}]
-Floor 16: []
-Floor 17: []
+Floor 15: [Passenger{w=84, start=15, finish=29, willSitOnAnyFloor=false}]
+Floor 16: [Passenger{w=128, start=16, finish=8, willSitOnAnyFloor=true}]
+Floor 17: [Passenger{w=111, start=17, finish=1, willSitOnAnyFloor=false}]
 Floor 18: []
-Floor 19: []
+Floor 19: [Passenger{w=111, start=19, finish=7, willSitOnAnyFloor=false}]
 Floor 20: []
 Floor 21: []
-Floor 22: []
+Floor 22: [Passenger{w=65, start=22, finish=25, willSitOnAnyFloor=false}]
 Floor 23: []
-Floor 24: []
-Floor 25: []
-Floor 26: []
-Floor 27: [Passenger{w=49, start=27, finish=11, willSitOnAnyFloor=false}]
-Floor 28: [Passenger{w=43, start=28, finish=20, willSitOnAnyFloor=false}]
+Floor 24: [Passenger{w=142, start=24, finish=10, willSitOnAnyFloor=true}, Passenger{w=104, start=24, finish=3, willSitOnAnyFloor=false}]
+Floor 25: [Passenger{w=111, start=25, finish=9, willSitOnAnyFloor=true}]
+Floor 26: [Passenger{w=143, start=26, finish=13, willSitOnAnyFloor=false}]
+Floor 27: []
+Floor 28: [Passenger{w=112, start=28, finish=13, willSitOnAnyFloor=false}]
 Floor 29: []
-Floor 30: [Passenger{w=142, start=30, finish=22, willSitOnAnyFloor=false}, Passenger{w=44, start=30, finish=22, willSitOnAnyFloor=false}]
+Floor 30: [Passenger{w=116, start=30, finish=19, willSitOnAnyFloor=false}]

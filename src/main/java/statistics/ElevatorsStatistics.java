@@ -55,7 +55,7 @@ public class ElevatorsStatistics extends Thread implements ElevatorArrivedFloorL
 
         updateStatisticsItem(floorNum, prevPositionItem, statisticsItem, currentPassengers);
         updatePrevElevatorPosition(floorNum, prevPositionItem, currentPassengers);
-
+        log.info("In statistics: " + elevator);
         whatToWrap.elevatorArrivedOnFloor(elevator, floorNum);
     }
 
